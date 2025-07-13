@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useMemo, useCallback, useRef } from 'react';
+import { ClientPageWrapper } from '@/components/client-page-wrapper';
 import { useSupabase } from '@/contexts/supabase-context';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { PieChart, Pie } from 'recharts';
@@ -76,7 +77,7 @@ const chartConfig = {
 } satisfies ChartConfig;
 
 
-export default function DashboardPage() {
+function DashboardContent() {
   const { supabase, credentials, isLoading: isSupabaseLoading } = useSupabase();
   const [data, setData] = useState<Record[]>([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -406,5 +407,13 @@ export default function DashboardPage() {
             </Card>
         </div>
     </div>
+  );
+}
+
+export default function DashboardPage() {
+  return (
+    <ClientPageWrapper>
+      <DashboardContent />
+    </ClientPageWrapper>
   );
 }

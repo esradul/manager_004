@@ -1,9 +1,19 @@
 "use client";
 
+import { ClientPageWrapper } from '@/components/client-page-wrapper';
+
+export default function ManualReplyPage() {
+  return (
+    <ClientPageWrapper>
+      <ManualReplyContent />
+    </ClientPageWrapper>
+  );
+}
+
 import { ContentWorkflow } from '@/components/workflows/content-workflow';
 import { ManualReplyCard } from '@/components/workflows/manual-reply-card';
 
-export default function ManualReplyPage() {
+function ManualReplyContent() {
   return (
     <div>
       <h1 className="text-2xl font-semibold mb-4">Manual Reply</h1>

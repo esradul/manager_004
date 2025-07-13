@@ -1,9 +1,19 @@
 "use client";
 
+import { ClientPageWrapper } from '@/components/client-page-wrapper';
+
+export default function ImportantPage() {
+  return (
+    <ClientPageWrapper>
+      <ImportantContent />
+    </ClientPageWrapper>
+  );
+}
+
 import { ContentWorkflow } from '@/components/workflows/content-workflow';
 import { ImportantCard } from '@/components/workflows/important-card';
 
-export default function ImportantPage() {
+function ImportantContent() {
   return (
     <div>
       <h1 className="text-2xl font-semibold mb-4">Important</h1>

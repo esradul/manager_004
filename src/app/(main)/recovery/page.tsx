@@ -1,5 +1,15 @@
 "use client";
 
+import { ClientPageWrapper } from '@/components/client-page-wrapper';
+
+export default function RecoveryPage() {
+  return (
+    <ClientPageWrapper>
+      <RecoveryContent />
+    </ClientPageWrapper>
+  );
+}
+
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
@@ -12,7 +22,7 @@ import { ContentWorkflow } from '@/components/workflows/content-workflow';
 import { RecoveryCard } from '@/components/workflows/recovery-card';
 import { useToast } from '@/hooks/use-toast';
 
-export default function RecoveryPage() {
+function RecoveryContent() {
   const [timeRange, setTimeRange] = useState('7d');
   const [startDate, setStartDate] = useState<Date | undefined>();
   const [endDate, setEndDate] = useState<Date | undefined>();

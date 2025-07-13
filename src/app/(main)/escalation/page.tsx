@@ -1,9 +1,19 @@
 "use client";
 
+import { ClientPageWrapper } from '@/components/client-page-wrapper';
+
+export default function EscalationPage() {
+  return (
+    <ClientPageWrapper>
+      <EscalationContent />
+    </ClientPageWrapper>
+  );
+}
+
 import { ContentWorkflow } from '@/components/workflows/content-workflow';
 import { EscalationCard } from '@/components/workflows/escalation-card';
 
-export default function EscalationPage() {
+function EscalationContent() {
   return (
     <div>
       <h1 className="text-2xl font-semibold mb-4">Escalation</h1>

@@ -1,9 +1,19 @@
 "use client";
 
+import { ClientPageWrapper } from '@/components/client-page-wrapper';
+
+export default function SendGuardPage() {
+  return (
+    <ClientPageWrapper>
+      <SendGuardContent />
+    </ClientPageWrapper>
+  );
+}
+
 import { ContentWorkflow } from '@/components/workflows/content-workflow';
 import { SendGuardCard } from '@/components/workflows/sendguard-card';
 
-export default function SendGuardPage() {
+function SendGuardContent() {
   const sendGuardFilter = 'and(permission.eq.Waiting,removed.eq.false),and(permission.eq.Objection,Objection_nai.eq.true,removed.eq.false)';
 
   return (
