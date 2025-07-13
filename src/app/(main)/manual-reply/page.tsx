@@ -1,5 +1,7 @@
 "use client";
 
+import { ContentWorkflow } from '@/components/workflows/content-workflow';
+import { ManualReplyCard } from '@/components/workflows/manual-reply-card';
 import { ClientPageWrapper } from '@/components/client-page-wrapper';
 
 export default function ManualReplyPage() {
@@ -9,9 +11,6 @@ export default function ManualReplyPage() {
     </ClientPageWrapper>
   );
 }
-
-import { ContentWorkflow } from '@/components/workflows/content-workflow';
-import { ManualReplyCard } from '@/components/workflows/manual-reply-card';
 
 function ManualReplyContent() {
   return (

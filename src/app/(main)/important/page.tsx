@@ -1,5 +1,7 @@
 "use client";
 
+import { ContentWorkflow } from '@/components/workflows/content-workflow';
+import { ImportantCard } from '@/components/workflows/important-card';
 import { ClientPageWrapper } from '@/components/client-page-wrapper';
 
 export default function ImportantPage() {
@@ -9,9 +11,6 @@ export default function ImportantPage() {
     </ClientPageWrapper>
   );
 }
-
-import { ContentWorkflow } from '@/components/workflows/content-workflow';
-import { ImportantCard } from '@/components/workflows/important-card';
 
 function ImportantContent() {
   return (

@@ -1,5 +1,7 @@
 "use client";
 
+import { ContentWorkflow } from '@/components/workflows/content-workflow';
+import { EscalationCard } from '@/components/workflows/escalation-card';
 import { ClientPageWrapper } from '@/components/client-page-wrapper';
 
 export default function EscalationPage() {
@@ -9,9 +11,6 @@ export default function EscalationPage() {
     </ClientPageWrapper>
   );
 }
-
-import { ContentWorkflow } from '@/components/workflows/content-workflow';
-import { EscalationCard } from '@/components/workflows/escalation-card';
 
 function EscalationContent() {
   return (
